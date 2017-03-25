@@ -26,8 +26,9 @@ def firstLinearRelation(functionValues, deltas):
 
 def firstVector(functionValues, deltas):
     a = np.array([0])
+    c = np.array([1])
     b = firstLinearRelation(functionValues, deltas)
-    return np.concatenate((a, b, a))
+    return np.concatenate((a, b, c))
 
 def secondLinearRelation(rowLength, j, deltas):
     a = np.array([deltas[j + 1], 2 * (deltas[j] + deltas[j + 1]), deltas[j]])
